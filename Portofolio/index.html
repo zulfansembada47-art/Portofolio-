@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Zulfan Cahya Sembada</title>
+    <!-- Hubungkan ke File CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Semantik -->
+    <header>
+        <nav>
+            <div class="logo">Portofolio Zulfan</div>
+            <ul class="nav-links">
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#proyek">Proyek & Pengalaman</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="tentang">
+        <div class="hero-photo-container">
+            <!-- Foto Profil Zulfan Cahya Sembada -->
+            <img src="foto-saya.jpg" alt="Zulfan Cahya Sembada">
+        </div>
+        <h1>Zulfan Cahya Sembada</h1>
+        <p>Saya adalah seorang lulusan smk teknik jaringan komputer 
+            dan telekomunikasi yang memiliki pengalaman dalam instalasi dan pemeliharaan jaringan komputer, serta memiliki sertifikasi MikroTik. Saya bersemangat untuk terus belajar dan mengembangkan keahlian saya di bidang teknologi informasi dan komunikasi.
+            saat ini saya sedang menempuh pendidikan di Universitas Teknologi Yogyakarta, Saya kuliah di program studi Informatika dengan fokus rekayasa perangkat lunak.</p>
+        <a href="#kontak" class="btn">Hubungi Saya</a>
+    </section>
+
+    <div class="container">
+
+        <!-- Bagian Proyek & Pengalaman Lapangan -->
+        <section id="proyek" class="section-container">
+            <h2 class="section-title">Proyek & Pengalaman Kerja</h2>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" onclick="filterCards('all', event)">Semua</button>
+                <button class="filter-btn" onclick="filterCards('jaringan', event)">Jaringan & Infrastruktur</button>
+                <button class="filter-btn" onclick="filterCards('pkl', event)">PKL & Instansi</button>
+                <button class="filter-btn" onclick="filterCards('proyek', event)">Proyek</button>
+                
+            </div>
+
+            <!-- Grid Proyek -->
+            <div class="grid-section">
+                <div class="card item-card jaringan">
+                    <span class="tag">PT. Zona Kolektif Indonesia</span>
+                    <h3>Teknisi Lapangan & Pemeliharaan Jaringan WiFi</h3>
+                    <p>Bertanggung jawab dalam perbaikan gangguan koneksi internet pelanggan, pemeliharaan router, dan penarikan serta penyambungan kabel Fiber Optic (FO) untuk pemasangan pelanggan baru.</p>
+                </div>
+
+                <div class="card item-card pkl">
+                    <span class="tag">Dinas Kominfo Kab. Sleman</span>
+                    <h3>Praktik Kerja Lapangan (PKL)</h3>
+                    <p>Berperan sebagai teknisi lapangan yang membantu konfigurasi perangkat Optical Network Terminal (ONT) serta mendukung pemeliharaan infrastruktur jaringan komputer instansi pemerintah.</p>
+                </div>
+
+                <div class="card item-card jaringan">
+                    <span class="tag">Sertifikasi & Praktik</span>
+                    <h3>Instalasi ODP & Splicing Fiber Optic</h3>
+                    <p>Melakukan pemasangan Optical Distribution Point (ODP) di tiang jaringan, penyambungan inti kabel menggunakan fusion splicer, serta crimping kabel UTP.</p>
+                </div>
+
+                <div class="card item-card jaringan">
+                    <span class="tag">Network Configuration</span>
+                    <h3>Konfigurasi Router & Perangkat ONT</h3>
+                    <p>Pengaturan dan manajemen perangkat jaringan berbasis MikroTik dan ONT agar siap terhubung ke sistem jaringan internet pusat dengan stabil.</p>
+                </div>
+                <div class="card item-card proyek">
+                    <span class="tag">Implementasi</span>
+                    <h3>Sistem Logistik</h3>
+                    <p>Aplikasi Python dengan graf berbobot, BST untuk nomor resi, dan manifest kurir.</p>
+                    <h3></h3>
+                </div>
+                <div class="card item-card proyek">
+                    <span class="tag">Implementasi</span>
+                    <h3>Moto Reminder</h3>
+                    <p>Aplikasi mobile yang bertujuan untuk membantu pemilik sepeda motor mengelola jadwal perawatan kendaraan</p>
+                    <h3></h3>
+                </div>
+                <div class="card item-card proyek">
+                    <span class="tag">Implementasi</span>
+                    <h3>Desain Web Portofolio</h3>
+                    <p>Sebagai bentuk implementasi langsung dari materi perkuliahan web development, mulai dari penerapan elemen HTML semantik, pengelolaan tata letak modern (Flexbox dan CSS Grid), hingga penambahan interaksi fungsional menggunakan JavaScript.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Keahlian -->
+        <section id="keahlian" class="section-container">
+            <h2 class="section-title">Keahlian Teknis</h2>
+            <div class="skills-grid">
+                <div class="skill-badge">Splicing Kabel Fiber Optic</div>
+                <div class="skill-badge">Crimping Kabel UTP</div>
+                <div class="skill-badge">Setting ONT & Router</div>
+                <div class="skill-badge">Pemasangan ODP di Tiang</div>
+                <div class="skill-badge">Troubleshooting Jaringan</div>
+                <div class="skill-badge">Struktur & Algoritma</div>
+            </div>
+        </section>
+
+        <!-- Form Validasi Pesan Kontak -->
+        <section id="kontak" class="form-section">
+            <h2>Kirim Pesan</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nama Anda</label>
+                    <input type="text" id="name" placeholder="Masukkan nama Anda...">
+                    <div class="error-msg" id="nameError">Nama wajib diisi.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Anda</label>
+                    <input type="email" id="email" placeholder="nama@email.com">
+                    <div class="error-msg" id="emailError">Format email tidak valid.</div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" rows="4" placeholder="Tuliskan pesan Anda..."></textarea>
+                    <div class="error-msg" id="msgError">Pesan tidak boleh kosong.</div>
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+                <div class="success-msg" id="successMsg">Pesan Anda berhasil dikirim! Terima kasih.</div>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Footer Semantik -->
+    <footer>
+        <p>&copy; 2026 Zulfan Cahya Sembada | Universitas Teknologi Yogyakarta</p>
+    </footer>
+
+    <!-- Hubungkan ke File JavaScript Eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
